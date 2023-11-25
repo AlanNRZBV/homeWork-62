@@ -1,6 +1,6 @@
 import { Col } from "react-bootstrap";
 import { FC } from "react";
-import { IFeaturedItem } from "../../types";
+import { IFeaturedItem } from "../../../types";
 
 const FeaturedItem: FC<IFeaturedItem> = ({src}) => {
   return (

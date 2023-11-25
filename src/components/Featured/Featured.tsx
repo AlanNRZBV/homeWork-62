@@ -1,7 +1,7 @@
 import { Row } from "react-bootstrap";
 import FeaturedItem from "./FeaturedItem.tsx";
-import { IFeaturedItem } from "../../types";
-import { BASE_PLACEHOLDER_URL } from "../constants/constants.ts";
+import { IFeaturedItem } from "../../../types";
+import { BASE_PLACEHOLDER_URL } from "../../constants/constants.ts";
 
 const Featured = () => {
 

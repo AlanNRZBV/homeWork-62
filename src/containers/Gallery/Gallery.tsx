@@ -1,9 +1,8 @@
-import { Row } from 'react-bootstrap';
-import { IGalleryItem } from '../../../types';
-import { BASE_PLACEHOLDER_URL } from '../../constants/constants.ts';
-import GalleryItem from "./GalleryItem.tsx";
+import { Row } from "react-bootstrap";
+import { IGalleryItem } from "../../../types";
+import { BASE_PLACEHOLDER_URL } from "../../constants/constants.ts";
 
-const SmallGallery = () => {
+const Gallery = () => {
   const galleryItems: IGalleryItem[] = [
     {
       title: 'Project #1',
@@ -26,13 +25,11 @@ const SmallGallery = () => {
       description: 'Lorem ipsum dolor sit amet.',
     },
   ];
+  return (
+    <Row>
 
-  return <Row className="mb-3">
-    {galleryItems.map((item,index)=>(
-        <GalleryItem title={item.title} img={item.img} description={item.description} key={index}/>
-    ))}
-  </Row>;
+    </Row>
+  );
 };
 
-export default SmallGallery;
-
+export default Gallery;
