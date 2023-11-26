@@ -4,7 +4,7 @@ import { IFeaturedItem } from "../../../types";
 
 const FeaturedItem: FC<IFeaturedItem> = ({src}) => {
   return (
-    <Col><img className="rounded rounded-3" src={src} alt="featured brand"/></Col>
+    <Col lg={2} className="d-flex justify-content-center align-items-center"><img className="rounded rounded-3" src={src} alt="featured brand"/></Col>
   );
 };
 

@@ -15,7 +15,7 @@ const Featured = () => {
   ]
 
   return (
-    <Row className="bg-body-tertiary py-3 px-3 mb-3 rounded rounded-3">
+    <Row className="bg-body-tertiary py-3 px-3 mb-5 rounded rounded-3">
       {featuredItems.map((item,index)=>(
         <FeaturedItem src={item.src} key={index}/>
       ))}

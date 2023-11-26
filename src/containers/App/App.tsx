@@ -2,7 +2,8 @@ import { Col, Container, Nav, Navbar, NavbarBrand, Row } from 'react-bootstrap';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home.tsx';
 import Gallery from '../Gallery/Gallery.tsx';
-import Contacts from '../Contacts/Contacts.tsx';
+import AboutMe from '../Contacts/AboutMe.tsx';
+import React from 'react';
 
 function App() {
   return (
@@ -20,29 +21,31 @@ function App() {
                 <NavLink className="nav-link" to="/gallery">
                   Gallery
                 </NavLink>
-                <NavLink className="nav-link" to="/contacts">
-                  Contacts
+                <NavLink className="nav-link" to="/about-me">
+                  About Me
                 </NavLink>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </header>
-      <main className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-      </main>
-      <footer className="bg-body-tertiary">
+      <Container>
+        <main className="mb-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/about-me" element={<AboutMe />} />
+          </Routes>
+        </main>
+      </Container>
+      <footer className="bg-body-tertiary py-3 px-3">
         <Container>
           <Row>
             <Col>footer content</Col>
           </Row>
         </Container>
       </footer>
-  </>
+    </>
   );
 }
 
