@@ -7,15 +7,16 @@ const AboutMe = () => {
   const [feedback, setFeedback] = useState<IFeedback[]>([]);
   const isSubmitted = useRef(false);
 
-  const submitHandler = (e: React.FormEvent) => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const target = e.currentTarget
     const newFeedback: IFeedback = {
-      username: e.target.username.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
+      username: target.username.value,
+      email: target.email.value,
+      message: target.message.value,
     };
     setFeedback((prevState) => [...prevState, newFeedback]);
-    e.target.reset();
+    target.reset();
     isSubmitted.current = true;
   };
 

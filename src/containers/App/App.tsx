@@ -3,7 +3,6 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home.tsx';
 import Gallery from '../Gallery/Gallery.tsx';
 import AboutMe from '../Contacts/AboutMe.tsx';
-import React from 'react';
 
 function App() {
   return (
@@ -41,7 +40,20 @@ function App() {
       <footer className="bg-body-tertiary py-3 px-3">
         <Container>
           <Row>
-            <Col>footer content</Col>
+            <Col>
+              <span className="text text-secondary">© 2011 John Doe All Rights Reserved</span>
+            </Col>
+            <Col lg={4} className="d-flex justify-content-around">
+              <NavLink className="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" to="/">
+                Home
+              </NavLink>
+              <NavLink className="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" to="/gallery">
+                Gallery
+              </NavLink>
+              <NavLink className="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" to="/about-me">
+                About Me
+              </NavLink>
+            </Col>
           </Row>
         </Container>
       </footer>
